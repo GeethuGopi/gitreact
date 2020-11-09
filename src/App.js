@@ -1,14 +1,21 @@
 import React from 'react';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
 import Home from './Component/Home';
 import About from './Component/About';
 import Contact from './Component/Contact';
 const App = () => {
   return ( 
-    <div>
+    <Router>
+    <Route exact path="/">
     <Home />
+    </Route>
+    <Route path="/About">
     <About />
+    </Route>
+    <Route path="/abc">
     <Contact />
-    </div>
+    </Route>
+    </Router>
    );
 }
  
